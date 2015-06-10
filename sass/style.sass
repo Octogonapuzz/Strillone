@@ -1,0 +1,729 @@
+@import "D:/xampp/htdocs/lavoro.dev/sass/reset"
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700,300)
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic)
+$larghezza: 1050px
+
+
+/* <----------- [LEGENDA] -----------> */
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	border-radius: $radius
+
+=transition($valore)
+	-webkit-transition: $valore
+	-moz-transition: $valore
+	transition: $valore
+=transform($scale)
+	-webkit-transform: scale($scale)
+	-moz-transform: scale($scale)
+	-o-transform: scale($scale)
+	-ms-transform: scale($scale)
+	transform: scale($scale)
+=rotate($rotate)
+	-webkit-transform: rotate($rotate)
+	-moz-transform: rotate($rotate)
+	-o-transform: rotate($rotate)
+	-ms-transform: rotate($rotate)
+	transform: rotate($rotate)
+
+
+/* <----------- [/LEGENDA] -----------> */
+
+/* <----------- [PRESETS] -----------> */
+
+::-webkit-scrollbar 
+	width: 12px
+
+::-webkit-scrollbar-track
+	background-color: #eaeaea
+	border-left: 1px solid #ccc
+
+::-webkit-scrollbar-thumb 
+	background-color: #ccc
+
+::-webkit-scrollbar-thumb:hover 
+	background-color: #F22613
+
+
+::selection, ::-webkit-selection
+	background: #F22613
+	color: #FFF
+.clearfix
+	clear: both
+a
+	text-decoration: none
+	color: #F22613
+	+transition(0.6s)
+a:hover
+	color: #F6685A
+	+transition(0.6s)
+strong
+	font-weight: bold
+cite, em
+	font-style: italic
+blockquote
+	color: #ccc
+	p
+		color: #ccc
+.small
+	font-size: 0.7em
+
+/* <----------- [/PRESETS] -----------> */
+
+html
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	-webkit-font-smoothing: antialiased
+	-ms-word-break: break-all
+	word-break: break-all
+	word-break: break-word
+	-webkit-hyphens: auto
+	-moz-hyphens: auto
+	hyphens: auto
+
+body
+	font-family: 'Lato', sans-serif
+	line-height: 1.5
+	font-size: 16px
+	overflow-x: hidden
+#menu-item-60
+	a
+		color: #F22613
+h2, h1, h3, h4, h5, h6 #nav1, #nav2
+	font-family: 'Oswald', sans-serif
+.firstNavbar
+	background: #242628
+	height: 50px
+	line-height: 50px
+	#searchTop
+		text-transform: uppercase
+		max-width: $larghezza
+		margin: auto
+		form
+			padding-right: 15px
+			padding-left: 15px
+			text-align: right
+			input
+				display: inline-block
+				width: 200px
+				height: 35px
+				line-height: 35px
+				background: #DDDDDD
+				color: #000
+				border: none
+			input[placeholder]
+				color: #000
+			button
+				top: 8px
+				height: 35px
+				right: 20px
+				line-height: 35px
+#singlePost
+	position: relative
+#nav1
+	display: block
+	//height: 80px
+	line-height: 80px
+	//padding-top: 30px
+	ul
+		text-align: right
+		padding-left: 15px
+		padding-right: 15px
+		li
+			display: inline-block
+			padding-left: 15px
+			font-size: 1.8em
+
+
+			a
+				+transition(0.6s)
+				color: #9E9E9E
+				text-decoration: none
+			a:hover
+				color: #F6685A
+				+transition(0.6s)
+
+.mainBox
+	max-width: $larghezza
+	margin: auto
+textarea
+	box-sizing: border-box
+	width: 100%
+	border: solid 1px #9E9E9E
+.comment-body
+	width: 100%
+	p
+		padding-left: 15px
+		padding-right: 15px
+		padding-top: 5px
+		clear: both
+		background-color: #F9F9F9
+		min-height: 60px
+		margin-top: 20px
+		margin-bottom: 10px
+		position: relative
+		margin-bottom: 50px
+		top: 20px
+		+border-radius(10px)
+	p::before
+		content: url(../img/coda.png)
+		position: absolute
+		top: -35px
+		left: 30px
+
+
+.comment-author
+	//border: solid 1px #9e9e9e
+	padding-left: 15px
+	padding-right: 15px
+	padding-top: 5px
+	float: left
+	width: 40%
+	> cite, > span
+		font-style: italic
+		position: relative
+		top: -10px
+		font-size: 1em
+		text-transform: uppercase
+		font-style: normal
+	> cite
+		padding-left: 5px
+	> span
+		padding-right: 15px
+	.says
+		display: none
+
+#respond, #comments, #disqus_thread
+	padding-bottom: 10px
+	padding-top: 30px
+	border-top: solid 2px #000
+	position: relative
+	top: -40px
+
+.commentmetadata
+	text-align: right
+	float: left
+	width: 50%
+	position: relative
+	top: 10px
+	a
+		color: #2B2B2B
+.reply
+	text-align: right
+	position: relative
+	top: -30px
+
+	a
+		display: inline-block
+		text-align: center
+		width: 200px
+		height: 40px
+		padding-right: 15px
+		padding-left: 15px
+		line-height: 40px
+		box-sizing: border-box
+		//border: #9E9E9E solid 1px
+		color: #9E9E9E
+		background: #FFF
+		text-transform: uppercase
+		margin-bottom: 10px
+#commentform
+	margin-bottom: 20px
+	input
+		height: 40px
+		padding-right: 15px
+		padding-left: 15px
+		line-height: 40px
+		box-sizing: border-box
+		border: #9E9E9E solid 1px
+		color: #9E9E9E
+		background: #FFF
+		text-transform: uppercase
+		margin-top: 10px
+	textarea
+		margin-top: 10px
+	input[type="text"]
+		width: 100%
+header
+	text-align: center
+	text-transform: uppercase
+	margin-bottom: 20px
+	margin-top: 20px
+	h1
+		font-size: 2.6em
+		font-weight: 900
+
+	h1::first-letter
+		color: #F22613
+	h4
+		font-size: 1em
+	a, a:hover
+		text-decoration: none
+		color: #000
+.mobile
+	display: none
+	float: right
+.secondNavbar
+	max-width: $larghezza
+	margin: auto
+	padding-left: 15px
+	padding-right: 15px
+	height: 60px
+	line-height: 60px
+	border-top: 1px solid
+	border-bottom: 3px solid
+	#nav2
+	ul
+		padding-left: 15px
+		padding-right: 15px
+		text-align: center
+
+
+		height: 60px
+		li
+			display: inline-block
+			text-transform: uppercase
+			font-size: 1.5em
+			a
+				color: #000
+				text-decoration: none
+			a:hover:first-letter
+				+transition(0.7s)
+				color: #9E9E9E
+		li:nth-last-child(1)::after
+			content: ""
+		li::after
+			content: " / "
+			font-weight: bolder
+			color: #9E9E9E
+			font-size: 25px
+			padding-left: 5px
+			padding-right: 5px
+
+$divisione: 100%/3
+
+#breadcrumbs
+	padding-left: 15px
+	padding-right: 15px
+.commenti
+	display: block
+	position: relative
+	height: 0px
+	top: -50px
+	text-align: center
+	padding-right: 15px
+	-webkit-backface-visibility: hidden
+	b
+		display: block
+		position: absolute
+		right: 10px
+		top: -15px
+		height: 50px
+		width: 50px
+		line-height: 50px
+		background: rgba(0, 0, 0, 0.5)
+		color: #FFF
+	::before
+		content: ''
+		width: 0
+		height: 0
+		border-left: 5px solid transparent
+		border-right: 5px solid transparent
+		border-top: 5px solid rgba(0, 0, 0, 0.5)
+		position: absolute
+		top: 100%
+article
+	padding-left: 15px
+	padding-right: 15px
+	p
+		padding-top: 5px
+.post
+	padding-bottom: 30px
+	.figureContainer
+		overflow: hidden
+	#dropcap
+		font-size: 3em
+		display: block
+		float: left
+		//initial-letter: 2
+		line-height: 100%
+		height: 45px
+		padding-right: 5px
+	li
+		list-style: square inside
+	figure
+		position: relative
+		img
+			max-width: 100%
+			display: block
+			vertical-align: top
+		figcaption
+			position: relative
+			font-size: 0.7em
+			margin-top: 10px
+			margin-bottom: 10px
+	blockquote
+		margin-top: 10px
+		margin-bottom: 10px
+		margin-left: 50px
+		padding-left: 15px
+		border-left: 3px solid #ccc
+.daBox
+	min-height: 560px
+	// -webkit-column-width va in conflitto usando altezze
+#container
+	-webkit-column-count: 3
+	column-count: 3
+	-webkit-column-width: 300px
+	-moz-column-width: 300px
+	column-width: 300px
+	margin-top: 30px
+	margin-bottom: 30px
+	position: relative
+	//min-height: 560px
+#joints-related-posts
+	-webkit-column-count: 3
+	column-count: 3
+	-webkit-column-width: 200px
+	-moz-column-width: 200px
+	column-width: 200px
+	margin-top: 15px
+	margin-bottom: 15px
+	position: relative
+.related_post
+	box-sizing: border-box
+	text-align: center
+	-webkit-column-break-inside: avoid
+	page-break-inside: avoid
+	break-inside: avoid-column
+	a > div
+		overflow: hidden
+	figure
+		background: #FFF
+		img
+			overflow: hidden
+			width: 100%
+			height: auto
+			//-webkit-backface-visibility: visible
+			-webkit-backface-visibility: hidden
+			background: #9e9e9e
+		img:hover
+			+transform(1.05)
+			+transition(all 0.5s ease)
+			opacity: 0.5
+			-webkit-backface-visibility: visible
+	h6
+		font-weight: bold
+		font-family: "Oswald"
+		font-size: 0.8em
+		letter-spacing: 2px
+.articleGrid
+	//width: $divisione
+	//margin-top: 15px
+	box-sizing: border-box
+	padding-left: 15px
+	padding-right: 15px
+	text-align: center
+	-webkit-column-break-inside: avoid
+	page-break-inside: avoid
+	break-inside: avoid-column
+	+transition(all 0.5s ease)
+	.figureContainer
+		overflow: hidden
+
+	figure
+		//overflow: hidden
+		background: #FFF
+		img
+			overflow: hidden
+			width: 100%
+			max-width: 100%
+			height: auto
+			//-webkit-backface-visibility: visible
+			-webkit-backface-visibility: hidden
+			+transition(all 0.5s ease)
+			display: block
+			vertical-align: top
+		img:hover
+			+transform(1.05)
+			+transition(all 0.5s ease)
+			opacity: 0.5
+			-webkit-backface-visibility: visible
+	.didascalia
+		color: #9E9E9E
+		font-size: 0.8em
+		//margin-top: 5px
+		padding: 15px
+		//background: #FFF
+		//position: relative
+		//top: -20px
+		//padding-top: 15px
+		span, time
+			text-transform: uppercase
+		span:nth-child(1)::after
+			content: " / "
+			padding-left: 5px
+			padding-right: 5px
+	h3
+		font-size: 1.3em
+		font-weight: 900
+		text-transform: uppercase
+		color: #000
+	p
+		color: #2B2B2B
+
+
+footer
+	background: #242628
+	font-family: 'Oswald', sans-serif
+	//min-height: 150px
+	.footerContainer
+		max-width: $larghezza
+		margin: auto
+		text-align: left
+	.copyright
+		display: block
+		float: left
+		padding-left: 15px
+		padding-right: 15px
+		//height: 80px
+		line-height: 80px
+		color: #9E9E9E
+		//font-weight: bolder
+		a 
+			color: #FFF
+/* POST */
+
+.singleTitle
+	border-bottom: 2px solid #9E9E9E
+	margin-bottom: 30px
+	h2
+		display: block
+		text-align: center
+		position: relative
+		top: 35px
+		font-size: 3em
+		letter-spacing: 0.15em
+		font-weight: 900
+		span
+			background: #FFF
+			margin: auto
+			padding-left: 15px
+			padding-right: 15px
+
+.data
+	text-align: center
+	color: #9E9E9E
+	font-size: 0.8em
+
+	//background: #FFF
+	position: relative
+	top: 30px
+	font-weight: bold
+	//padding-top: 15px
+	span, time
+		text-transform: uppercase
+	span:nth-child(1)::after
+		content: " / "
+		padding-left: 5px
+		padding-right: 5px
+.tagSide
+	margin-top: 30px
+	margin-bottom: 30px
+	border-top: solid 2px
+	margin-left: 15px
+	margin-right: 15px
+	.tagSegnaposto
+		position: relative
+		display: block
+		text-align: center
+		top: -25px
+		.fa-stack
+			position: relative
+.post_tags
+	//padding-top: 30px
+	padding-bottom: 30px
+.commentSide
+	margin-left: 15px
+	margin-right: 15px
+	.commentSegnaposto
+		position: relative
+		display: block
+		text-align: center
+		top: -20px
+		.fa-stack
+			position: relative
+			z-index: 1
+.taglinks
+	display: inline-block
+	padding-left: 15px
+	margin-bottom: 5px
+	padding-right: 15px
+	border: dashed #000000 1px
+	margin-right: 10px
+.asideBlocks
+	float: left
+	width: 70%
+.sidebar
+	float: left
+	width: 30%
+	box-sizing: border-box
+	.sidebarContent
+		margin-right: 15px
+		border: solid 1px #000
+		padding: 15px
+#back-top
+	display: none
+	height: 50px
+	width: 50px
+	background: rgba(0, 0, 0, 0.5)
+	position: fixed
+	right: 15px
+	bottom: 20px
+	line-height: 45px
+	font-size: 2em
+	text-align: center
+	cursor: pointer
+	a
+		color: #FFF !important
+		display: block
+		height: 50px
+		width: 50px
+.evidenza
+	margin-top: 40px
+	margin-bottom: 20px
+	text-align: center
+	img
+		position: relative
+		top: 15px
+		border: solid #FFF
+		box-shadow: 2px 1px 1px #2E2E2E
+		box-sizing: border-box
+		-webkit-transform: rotate(-2deg)
+		-moz-transform: rotate(-2deg)
+		-ms-transform: rotate(-2deg)
+		-o-transform: rotate(-2deg)
+		transform: translateZ(1px) rotate(-2deg)
+		max-width: 100%
+.noPost
+	background: url(../img/patata.png)
+	background-position: center center 
+	background-repeat: no-repeat
+	//background-size: contain
+.notag
+	margin-top: 20px
+.se-pre-con
+	width: 100%
+	height: 100%
+	position: absolute
+	background: #FFF
+	z-index: 999999999999999
+	text-align: center
+	> i
+		position: relative
+		top: 20%
+		font-size: 3em
+form[role="search"]
+	position: relative
+	display: block
+	input
+		height: 40px
+		padding-right: 15px
+		padding-left: 15px
+		line-height: 40px
+		box-sizing: border-box
+		border: #9E9E9E solid 1px
+		color: #9E9E9E
+		background: #FFF
+		text-transform: uppercase
+		width: 100%
+	button[type="submit"]
+		position: absolute
+		border: none
+		background: none
+		height: 40px
+		line-height: 40px
+		right: 40px
+		top: 0px
+		right: 10px
+.sidebarItem
+	margin-bottom: 10px
+.searchBar
+	padding-top: 20px
+	padding-bottom: 20px
+	padding-right: 15px
+	padding-left: 15px
+	text-align: right
+	form[role="search"]
+		width: 200px
+		display: inline-block
+	.label
+		display: inline-block
+		color: #2B2B2B
+@media screen and (max-width: 780px)
+	header h1
+		font-size: 2.3em
+	.mobile
+		display: block
+		position: absolute
+		right: 15px
+		//top: 5px
+		cursor: pointer
+		width: 30px
+		text-align: right
+		+transition(.5s)
+		margin-top: 5px
+	.ruota
+		+rotate(90deg)
+		+transition(.5s)
+		//margin-top: -5px
+	.secondNavbar
+		height: auto
+		min-height: 60px
+		#nav2
+			ul
+				display: none
+				height: auto
+				li
+					display: block
+					font-size: 1.3em
+					width: 100%
+					line-height: 1.3
+
+				li::after
+					content: ""
+@media screen and (max-width: 880px)
+	.asideBlocks
+		float: left
+		width: 100%
+	.sidebar
+		float: left
+		width: 100%
+		box-sizing: border-box
+		.sidebarContent
+			margin: 15px
+
+
+	#nav1
+		display: block
+		float: none
+		clear: both
+		ul
+			text-align: center
+
+
+	footer
+		.copyright
+			float: none
+			clear: both 
+		.footerContainer
+			text-align: center
+			float: none
+			clear: both
+	.firstNavbar
+		#searchTop
+			form
+				input
+					width: 100%
